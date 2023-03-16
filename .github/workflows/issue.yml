@@ -13,4 +13,4 @@ jobs:
       - name: Add Issue
         run: |
           echo "Adding issue to repository..."
-          echo "${{ github.event.action }}"
+          echo "${{ github.event_name }}"
