@@ -1,0 +1,23 @@
+name: Lint, Test and Deploy
+on: [push]
+jobs:
+  lint_check:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Just doing the lint
+        run: echo "Lint section"
+
+  test_check:
+    needs: [lint_check]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Just Test section
+        run: echo "Testing Section"
+
+  deploy_check:
+    needs: [test_check]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Just doing the deploy
+        run: echo "Deploying section"
+  
