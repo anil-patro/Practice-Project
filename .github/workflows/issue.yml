@@ -1,0 +1,16 @@
+name: Add Issue
+
+on:
+  issues:
+    types: [opened,edited]
+
+jobs:
+  add-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        uses: actions/checkout@v3
+      - name: Add Issue
+        run: |
+          echo "Adding issue to repository..."
+          echo "${{ github.event.action }}"
